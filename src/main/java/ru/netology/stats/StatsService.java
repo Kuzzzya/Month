@@ -44,7 +44,7 @@ public class StatsService {
 
     public int numberBelowAvg(int[] sales) {
         int number = 0;
-        int avg = 15;
+        int avg = calculateAvg(sales);
         for (int sale : sales) {
             if (sale < avg) {
                 number++;
@@ -56,7 +56,7 @@ public class StatsService {
 
     public int numberAboveAvg(int[] sales) {
         int amount = 0;
-        int avg = 15;
+        int avg = calculateAvg(sales);
         for (int sale : sales) {
             if (sale > avg) {
                 amount++;
